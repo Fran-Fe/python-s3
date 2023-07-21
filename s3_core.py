@@ -33,12 +33,12 @@ def upload_file(file_name, bucket, object_name=None) -> str:
 
     except ClientError as e:
         logging.error(e)
-        return e
+        raise e
 
     return response
 
 
-def upload_file(file_name, bucket, object_name) -> bool:
+def download_file(file_name, bucket, object_name) -> bool:
     s3_client = boto3.client('s3',
                              aws_access_key_id=aws_access_key_id,
                              aws_secret_access_key=aws_secret_access_key,
