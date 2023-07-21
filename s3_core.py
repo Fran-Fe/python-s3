@@ -3,8 +3,10 @@ import boto3
 from botocore.exceptions import ClientError
 import os
 
-aws_access_key_id = '',
-aws_secret_access_key = 'YOUR_SECRET_KEY',
+import config
+
+aws_access_key_id = config.aws_access_key_id,
+aws_secret_access_key = config.aws_secret_access_key,
 region_name = 'us-west-1'
 
 
